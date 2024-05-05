@@ -15,8 +15,8 @@ export async function getNumbersList(number: string): Promise<{ number: string; 
         }
     })
 
-    return numbersList.map((entry: { number: string; name: string; }) => ({
+    return numbersList.map((entry: { number: string; name: string | null; }) => ({
         number: entry.number,
-        name: entry.name || '', // If 'name' is null, fallback to an empty string
+        name: entry.name ? entry.name : '', // Ensuring name is always a string
     }));
 }
