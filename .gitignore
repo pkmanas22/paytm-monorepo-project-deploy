@@ -38,3 +38,5 @@ yarn-error.log*
 *.pem
 # Environment configuration
 **/.env
+# Environment configuration
+**/.env
